@@ -1,6 +1,7 @@
 #!/bin/bash
 
 docker run \
+  -d \
   --name=openvpn \
   --restart=always \
   --cap-add=NET_ADMIN \
