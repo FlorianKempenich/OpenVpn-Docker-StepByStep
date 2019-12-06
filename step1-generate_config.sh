@@ -1,9 +1,11 @@
 #!/bin/bash
 
+SERVER_QUALIFIED_NAME='floriankempenich.com'
+
 docker run \
   --rm \
   -it \
   -v $(pwd)/openvpn:/etc/openvpn \
   kylemanna/openvpn \
   ovpn_genconfig \
-  -u udp://floriankempenich.com:1194
+  -u udp://$SERVER_QUALIFIED_NAME:1194
